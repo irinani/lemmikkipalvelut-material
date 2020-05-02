@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Header from "./Header";
+import HomePage from "./pages/HomePage";
+import VetsPage from "./pages/VetsPage";
+import StoresPage from "./pages/StoresPage";
+import ExercisesPage from './pages/ExercisesPage';
+import WellbeingPage from './pages/WellbeingPage';
+import AssociationsPage from './pages/AssociationsPage';
+import EventsPage from './pages/EventsPage';
 
-function App() {
+import "./App.scss";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/elainlaakarit">
+            <VetsPage />
+          </Route>
+          <Route path="/elaintarvikeliikkeet">
+            <StoresPage />
+          </Route>
+          <Route path="/ulkoilu-ja-liikunta">
+            <ExercisesPage />
+          </Route>
+          <Route path="/hyvinvointi">
+            <WellbeingPage />
+          </Route>
+          <Route path="/yhdistykset">
+            <AssociationsPage />
+          </Route>
+          <Route path="/tapahtumat">
+            <EventsPage />
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   );
 }
-
-export default App;

@@ -1,0 +1,31 @@
+.Header {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .Toolbar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: auto;
+        }
+
+        li {
+            margin-right: 1rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

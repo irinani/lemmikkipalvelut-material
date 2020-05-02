@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// Expansion panel
+
+.MuiExpansionPanelSummary-content {
+  display: flex;
+
+  // justify-content: space-between;
+  span {
+    &:first-of-type {
+      width: 70%;
+    }
+
+    &:nth-of-type(2) {
+      width: 30%;
+    }
+  }
+}
+
+.MuiExpansionPanelDetails-root {
+  display: flex;
+
+  div {
+    &:first-of-type {
+      width: calc(70% - 24px);
+    }
+
+    &:nth-of-type(2) {
+      width: 30%;
+    }
+  }
+}
+
+.opening-hours {
+  th {
+    text-align: left;
+    padding-right: 1rem;
+  }
+}
+
+// .main-container {
+//   margin-top: calc(64px + 2rem);
+// }
