@@ -1,4 +1,8 @@
 function isOpenNow(hours) {
+  if (hours === "Avoinna ympäri vuorokauden") {
+    return true;
+  }
+
   const curDate = new Date();
 
   const startTime = `${hours.split("-")[0]}:00`;

@@ -23,10 +23,10 @@ export default function App() {
           <Route path="/elainlaakarit">
             <VetsPage />
           </Route>
-          <Route path="/elaintarvikeliikkeet">
+          {/* <Route path="/elaintarvikeliikkeet">
             <StoresPage />
-          </Route>
-          <Route path="/ulkoilu-ja-liikunta">
+          </Route> */}
+          {/* <Route path="/ulkoilu-ja-liikunta">
             <ExercisesPage />
           </Route>
           <Route path="/hyvinvointi">
@@ -37,7 +37,7 @@ export default function App() {
           </Route>
           <Route path="/tapahtumat">
             <EventsPage />
-          </Route>
+          </Route> */}
         </Switch>
       </main>
     </Router>

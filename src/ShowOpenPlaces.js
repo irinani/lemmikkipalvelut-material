@@ -1,10 +1,13 @@
 import React from "react";
 
 function toggleOpenPlaces(e) {
-  const items = document.querySelectorAll(".sortItem[data-open='false']");
+  const items = document.querySelectorAll(".sortItem");
+
   for (let i = 0; i < items.length; i++) {
     if (e.target.checked === true) {
-      items[i].classList.add("hidden");
+      if (items[i].getAttribute("data-open") !== "true") {
+        items[i].classList.add("hidden");
+      }
     } else {
       items[i].classList.remove("hidden");
     }

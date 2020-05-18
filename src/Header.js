@@ -17,10 +17,10 @@ export default function Header(props) {
               <li>
                 <Link to="/elainlaakarit">Eläinlääkärit</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/elaintarvikeliikkeet">Eläintarvikeliikkeet</Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="/ulkoilu-ja-liikunta">Ulkoilu ja liikunta</a>
               </li>
               <li>
@@ -31,7 +31,7 @@ export default function Header(props) {
               </li>
               <li>
                 <a href="/tapahtumat">Tapahtumat</a>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </Toolbar>

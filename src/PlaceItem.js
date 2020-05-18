@@ -1,1 +1,0 @@
-import LocationOnIcon from '@material-ui/icons/LocationOn';
