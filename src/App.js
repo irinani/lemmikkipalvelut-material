@@ -1,45 +1,36 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
-import HomePage from "./pages/HomePage";
-import VetsPage from "./pages/VetsPage";
-import StoresPage from "./pages/StoresPage";
-import ExercisesPage from './pages/ExercisesPage';
-import WellbeingPage from './pages/WellbeingPage';
-import AssociationsPage from './pages/AssociationsPage';
-import EventsPage from './pages/EventsPage';
-
+import HomePage from "./HomePage";
+import VetsPage from "./VetsPage";
+import PageNotFound from "./PageNotFound";
+import StoresPage from "./StoresPage";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "./theme";
 import "./App.scss";
 
 export default function App() {
-  return (
-    <Router>
-      <Header />
-      <main>
-        <Switch>
-          <Route path="/" exact>
-            <HomePage />
-          </Route>
-          <Route path="/elainlaakarit">
-            <VetsPage />
-          </Route>
-          {/* <Route path="/elaintarvikeliikkeet">
-            <StoresPage />
-          </Route> */}
-          {/* <Route path="/ulkoilu-ja-liikunta">
-            <ExercisesPage />
-          </Route>
-          <Route path="/hyvinvointi">
-            <WellbeingPage />
-          </Route>
-          <Route path="/yhdistykset">
-            <AssociationsPage />
-          </Route>
-          <Route path="/tapahtumat">
-            <EventsPage />
-          </Route> */}
-        </Switch>
-      </main>
-    </Router>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<Router basename="/demos/lemmikkipalvelut">
+				<Header />
+				<main>
+					<Switch>
+						<Route path="/" exact>
+							<HomePage />
+						</Route>
+						<Route exact path="/elainlaakarit">
+							<VetsPage />
+						</Route>
+						<Route exact path="/elaintarvikeliikkeet">
+							<StoresPage />
+						</Route>
+						<Route component={PageNotFound} />
+					</Switch>
+				</main>
+			</Router>
+		</ThemeProvider>
+	);
 }

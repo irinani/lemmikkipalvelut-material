@@ -3,7 +3,7 @@ export default [
     name: "Testiasema",
     isOpenToday: false,
     openingHours: [
-      { weekday: "Maanantai", hours: "7:00-21:00" },
+      { weekday: "Maanantai", hours: "7:00-23:59" },
       { weekday: "Tiistai", hours: "7:00-21:00" },
       { weekday: "Keskiviikko", hours: "7:00-21:00" },
       { weekday: "Torstai", hours: "7:00-21:00" },

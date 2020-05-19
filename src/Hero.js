@@ -1,28 +1,45 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-import "./Hero.scss";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 export default function Hero(props) {
-  const image = props.image;
-
-  return (
-    <div
-      className="hero"
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundPosition: props.backgroundPosition,
-      }}
-    >
-      <div className="hero__overlay">
-        <Container style={{ textAlign: "center" }} maxWidth={'sm'}>
-          <h1>Lorem ipsum dolor sit</h1>
-          <p>
-            Nam molestie nec tortor. Donec placerat leo sit amet velit.
-            Vestibulum id justo ut vitae massa. Proin in dolor mauris consequat
-            aliquam. Donec ipsum, vestibulum ullamcorper venenatis augue.
-          </p>
-        </Container>
-      </div>
-    </div>
-  );
+	return (
+		<Box
+			display="flex"
+			height="100vh"
+			pt="54px"
+			style={{
+				backgroundImage: `url(${props.img})`,
+				backgroundPosition: "center",
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
+			<Box
+				width="100%"
+				height="100%"
+				style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+				display="flex"
+				alignItems="center"
+			>
+				<Box
+					width={{ xs: "100%", md: "50%", lg: "40%" }}
+					height={{ xs: "auto", md: "100%" }}
+					bgcolor="rgba(0,0,0,0.8)"
+					color="white"
+					p={5}
+					display="flex"
+					justifyContent="center"
+					flexDirection="column"
+					ml="auto"
+					mt={{ xs: "auto", md: 0 }}
+				>
+					<Typography variant="h2" component="h1" gutterBottom>
+						{props.heading}
+					</Typography>
+					<Typography variant="body2">{props.description}</Typography>
+				</Box>
+			</Box>
+		</Box>
+	);
 }

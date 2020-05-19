@@ -48,6 +48,10 @@ p {
   }
 }
 
+.sortItem.hidden {
+  display: none !important;
+}
+
 // .main-container {
 //   margin-top: calc(64px + 2rem);
 // }
